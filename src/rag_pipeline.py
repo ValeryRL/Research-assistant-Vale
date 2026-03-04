@@ -70,6 +70,7 @@ class RAGPipeline:
         
         return response, citations
         
+    def _call_llm(self, prompt: str, retries: int = 2) -> str:
         api_key_check = os.getenv("GOOGLE_API_KEY")
         try:
             import streamlit as st
