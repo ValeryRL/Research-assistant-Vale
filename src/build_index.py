@@ -17,8 +17,12 @@ def main():
             from .ingest import main as ingest_main
             ingest_main()
         except ImportError:
-            from ingest import main as ingest_main
-            ingest_main()
+            try:
+                from ingest import main as ingest_main
+                ingest_main()
+            except ImportError:
+                from src.ingest import main as ingest_main
+                ingest_main()
             
     if not os.path.exists(chunks_file):
         print("Fatal error: Chunks still not generated.")
