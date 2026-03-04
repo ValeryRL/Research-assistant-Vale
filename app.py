@@ -29,12 +29,27 @@ def load_catalog():
 # Initialize session state
 if "messages" not in st.session_state:
     st.session_state.messages = []
-if "rag" not in st.session_state:
+
+@st.cache_resource(show_spinner="Initializing Database for the first time. This may take a minute...")
+def get_rag_pipeline():
     try:
-        st.session_state.rag = RAGPipeline()
+        from src.rag_pipeline import RAGPipeline
+        import os
+        
+        # Determine if we need to build the database
+        db_path = os.path.join(os.path.dirname(__file__), "chroma_db")
+        if not os.path.exists(db_path) or not os.listdir(db_path):
+            st.info("Vector database not found on this instance. Re-building index from catalog...")
+            from src.build_index import main as build_index_main
+            build_index_main()
+            
+        return RAGPipeline()
     except Exception as e:
         st.error(f"Failed to initialize RAG Pipeline: {e}")
-        st.session_state.rag = None
+        return None
+
+if "rag" not in st.session_state:
+    st.session_state.rag = get_rag_pipeline()
 
 papers = load_catalog()
 all_titles = [p["title"] for p in papers]

@@ -1,6 +1,9 @@
 import json
 import os
-from retrieval import ChromaVectorStore, EmbeddingModel
+try:
+    from .retrieval import ChromaVectorStore, EmbeddingModel
+except ImportError:
+    from retrieval import ChromaVectorStore, EmbeddingModel
 
 def main():
     current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -9,7 +12,16 @@ def main():
     db_path = os.path.join(project_root, "chroma_db")
     
     if not os.path.exists(chunks_file):
-        print(f"Chunks file not found at {chunks_file}. Run ingest.py first.")
+        print(f"Chunks file not found at {chunks_file}. Generating them now...")
+        try:
+            from .ingest import main as ingest_main
+            ingest_main()
+        except ImportError:
+            from ingest import main as ingest_main
+            ingest_main()
+            
+    if not os.path.exists(chunks_file):
+        print("Fatal error: Chunks still not generated.")
         return
         
     with open(chunks_file, "r", encoding="utf-8") as f:
