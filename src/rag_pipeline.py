@@ -1,26 +1,27 @@
 import os
-import google.generativeai as genai
+from openai import OpenAI
 from .retrieval import ChromaVectorStore, EmbeddingModel
 from .prompts import PROMPTS
 from dotenv import load_dotenv
 
 load_dotenv()
 
-# Configure GenAI if key is present
-api_key = os.getenv("GOOGLE_API_KEY")
+# Configure OpenAI if key is present
+api_key = os.getenv("OPENAI_API_KEY")
 
 try:
     import streamlit as st
-    if "GOOGLE_API_KEY" in st.secrets:
-        api_key = st.secrets["GOOGLE_API_KEY"]
+    if "OPENAI_API_KEY" in st.secrets:
+        api_key = st.secrets["OPENAI_API_KEY"]
 except ImportError:
     pass
 
+openai_client = None
 if api_key:
-    genai.configure(api_key=api_key)
+    openai_client = OpenAI(api_key=api_key)
 
 class RAGPipeline:
-    def __init__(self, db_path="./chroma_db", model_type="google"):
+    def __init__(self, db_path="./chroma_db", model_type="openai"):
         self.vector_store = ChromaVectorStore(persist_directory=db_path)
         self.vector_store.create_collection("papers_small_chunks")
         self.model_type = model_type
@@ -71,25 +72,28 @@ class RAGPipeline:
         return response, citations
         
     def _call_llm(self, prompt: str, retries: int = 2) -> str:
-        api_key_check = os.getenv("GOOGLE_API_KEY")
+        api_key_check = os.getenv("OPENAI_API_KEY")
         try:
             import streamlit as st
-            if "GOOGLE_API_KEY" in st.secrets:
-                api_key_check = st.secrets["GOOGLE_API_KEY"]
+            if "OPENAI_API_KEY" in st.secrets:
+                api_key_check = st.secrets["OPENAI_API_KEY"]
         except ImportError:
             pass
             
-        if self.model_type == "google" and api_key_check:
-            model = genai.GenerativeModel('gemini-1.5-flash')
+        if self.model_type == "openai" and api_key_check and openai_client:
             last_error = ""
             for attempt in range(retries):
                 try:
-                    response = model.generate_content(prompt)
-                    return response.text
+                    response = openai_client.chat.completions.create(
+                        model="gpt-4o-mini",
+                        messages=[{"role": "user", "content": prompt}],
+                        temperature=0.3
+                    )
+                    return response.choices[0].message.content
                 except Exception as e:
                     last_error = str(e)
-                    if "504" not in str(e) and "Deadline Exceeded" not in str(e):
+                    if "504" not in str(e) and "timeout" not in str(e).lower():
                         break # Only retry on timeouts
-            return f"⚠️ Error calling Google API after {retries} intentos: {last_error}. Por favor, vuelve a intentar tu pregunta."
+            return f"⚠️ Error calling OpenAI API after {retries} intentos: {last_error}. Por favor, vuelve a intentar tu pregunta."
         else:
-            return "⚠️ LLM is not configured. Please add `GOOGLE_API_KEY` to an `.env` file in the root directory.\n\n**Here is the generated prompt that would have been sent:**\n\n```\n" + prompt + "\n```"
+            return "⚠️ LLM is not configured. Please add `OPENAI_API_KEY` to an `.env` file or Streamlit Secrets.\n\n**Here is the generated prompt that would have been sent:**\n\n```\n" + prompt + "\n```"
