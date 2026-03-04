@@ -88,7 +88,7 @@ def process_document(pdf_path: str, paper_metadata: dict, chunker_small: TokenCh
     
     return small_chunks, large_chunks
 
-if __name__ == "__main__":
+def main():
     current_dir = os.path.dirname(os.path.abspath(__file__))
     project_root = os.path.dirname(current_dir)
     papers_dir = os.path.join(project_root, "papers")
@@ -126,3 +126,6 @@ if __name__ == "__main__":
         json.dump(all_large_chunks, f)
         
     print("Chunks cached in data/ directory.")
+
+if __name__ == "__main__":
+    main()
