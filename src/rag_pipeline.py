@@ -7,8 +7,17 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Configure GenAI if key is present
-if os.getenv("GOOGLE_API_KEY"):
-    genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+api_key = os.getenv("GOOGLE_API_KEY")
+
+try:
+    import streamlit as st
+    if "GOOGLE_API_KEY" in st.secrets:
+        api_key = st.secrets["GOOGLE_API_KEY"]
+except ImportError:
+    pass
+
+if api_key:
+    genai.configure(api_key=api_key)
 
 class RAGPipeline:
     def __init__(self, db_path="./chroma_db", model_type="google"):
@@ -61,8 +70,15 @@ class RAGPipeline:
         
         return response, citations
         
-    def _call_llm(self, prompt: str, retries: int = 2) -> str:
-        if self.model_type == "google" and os.getenv("GOOGLE_API_KEY"):
+        api_key_check = os.getenv("GOOGLE_API_KEY")
+        try:
+            import streamlit as st
+            if "GOOGLE_API_KEY" in st.secrets:
+                api_key_check = st.secrets["GOOGLE_API_KEY"]
+        except ImportError:
+            pass
+            
+        if self.model_type == "google" and api_key_check:
             model = genai.GenerativeModel('gemini-1.5-flash')
             last_error = ""
             for attempt in range(retries):
