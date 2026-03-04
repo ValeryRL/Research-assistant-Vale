@@ -1,6 +1,15 @@
 import streamlit as st
 import json
 import os
+
+# OVERRIDE SQLITE3 FOR CHROMADB IN STREAMLIT CLOUD
+try:
+    __import__('pysqlite3')
+    import sys
+    sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+except ImportError:
+    pass
+
 from src.rag_pipeline import RAGPipeline
 
 st.set_page_config(
