@@ -1,0 +1,224 @@
+{
+  "papers": [
+    {
+      "id": "paper_001",
+      "title": "Shaping the Political Order of the Middle East: Crisis and Opportunity",
+      "authors": ["Ranj Alaaldin"],
+      "year": 2019,
+      "venue": "Istituto Affari Internazionali (IAI)",
+      "doi": "10.jstor/resrep19671",
+      "filename": "Alaaldin-ShapingPoliticalOrder-2019.pdf",
+      "topics": ["Middle East politics", "political order", "crisis management"],
+      "abstract": "An analysis of the political order in the Middle East, focusing on how regional crises can be managed and transformed into opportunities for stability."
+    },
+    {
+      "id": "paper_002",
+      "title": "Political Change in the Middle East: An Attempt to Analyze the 'Arab Spring'",
+      "authors": ["Martin Beck", "Simone Hüser"],
+      "year": 2012,
+      "venue": "German Institute for Global and Area Studies (GIGA)",
+      "doi": "10.jstor/resrep07617",
+      "filename": "Beck-PoliticalChangeMiddle-2012.pdf",
+      "topics": ["Arab Spring", "political change", "Middle East"],
+      "abstract": "This paper attempts to analyze the political changes brought about by the Arab Spring and its long-term implications for the Middle East."
+    },
+    {
+      "id": "paper_003",
+      "title": "Constructing and Naturalizing the Middle East",
+      "authors": ["Karen Culcasi"],
+      "year": 2010,
+      "venue": "Geographical Review",
+      "doi": "10.2307/25741178",
+      "filename": "CULCASI-CONSTRUCTINGNATURALIZINGMIDDLE-2010.pdf",
+      "topics": ["geography", "regionalism", "Middle East"],
+      "abstract": "An examination of how the concept of the Middle East has been geographically and politically constructed and naturalized over time."
+    },
+    {
+      "id": "paper_004",
+      "title": "Transition in the Middle East: Transition to What?",
+      "authors": ["James M. Dorsey"],
+      "year": 2017,
+      "venue": "Begin-Sadat Center for Strategic Studies",
+      "doi": "10.jstor/resrep16948",
+      "filename": "Dorsey-TransitionMiddleEast-2017.pdf",
+      "topics": ["political transition", "strategic studies", "Middle East"],
+      "abstract": "An exploration of the ongoing political and social transitions in the Middle East and the uncertainty surrounding their ultimate outcomes."
+    },
+    {
+      "id": "paper_005",
+      "title": "Facing the New World Order: Middle East Geopolitics and Palestinian Peace Strategies",
+      "authors": ["G. Falah"],
+      "year": 1995,
+      "venue": "GeoJournal",
+      "doi": "10.2307/41146887",
+      "filename": "Falah-FacingNewWorld-1995.pdf",
+      "topics": ["geopolitics", "Palestinian peace strategies", "New World Order"],
+      "abstract": "An analysis of Middle East geopolitics in the context of the New World Order, with a specific focus on Palestinian peace strategies."
+    },
+    {
+      "id": "paper_006",
+      "title": "Regional Geopolitical Rivalries in the Middle East: Implications for Europe",
+      "authors": ["Ellie Geranmayeh"],
+      "year": 2018,
+      "venue": "Istituto Affari Internazionali (IAI)",
+      "doi": "10.jstor/resrep19678",
+      "filename": "Geranmayeh-RegionalGeopoliticalRivalries-2018.pdf",
+      "topics": ["geopolitical rivalries", "European policy", "Middle East"],
+      "abstract": "An assessment of the regional geopolitical rivalries in the Middle East and their strategic implications for Europe and the European Union."
+    },
+    {
+      "id": "paper_007",
+      "title": "Gray Zones in the Middle East",
+      "authors": ["Nicholas Heras"],
+      "year": 2017,
+      "venue": "Center for a New American Security",
+      "doi": "10.jstor/resrep27464",
+      "filename": "Heras-GrayZonesMiddle-2017.pdf",
+      "topics": ["gray zones", "security studies", "conflict"],
+      "abstract": "An examination of 'gray zones' in the Middle East, focusing on state and non-state actors operating in spaces of ambiguous conflict."
+    },
+    {
+      "id": "paper_008",
+      "title": "Regionalism as Geopolitics",
+      "authors": ["Peter Jay"],
+      "year": 1979,
+      "venue": "Foreign Affairs",
+      "doi": "10.2307/20040490",
+      "filename": "Jay-RegionalismGeopolitics-1979.pdf",
+      "topics": ["regionalism", "geopolitics", "foreign affairs"],
+      "abstract": "A theoretical and practical analysis of regionalism as a geopolitical force, with historical insights into global relations."
+    },
+    {
+      "id": "paper_009",
+      "title": "Cheap Havoc: How Cyber-Geopolitics Will Destabilize the Middle East",
+      "authors": ["Kristina Kausch"],
+      "year": 2017,
+      "venue": "German Marshall Fund of the United States",
+      "doi": "10.jstor/resrep18776",
+      "filename": "Kausch-CheapHavoc-2017.pdf",
+      "topics": ["cyber-geopolitics", "destabilization", "Middle East"],
+      "abstract": "An analysis of the growing role of cyber-geopolitics in the Middle East and how it contributes to regional destabilization."
+    },
+    {
+      "id": "paper_010",
+      "title": "Competitive Multipolarity in the Middle East",
+      "authors": ["Kristina Kausch"],
+      "year": 2014,
+      "venue": "Istituto Affari Internazionali (IAI)",
+      "doi": "10.jstor/resrep09788",
+      "filename": "Kausch-CompetitiveMultipolarityMiddle-2014.pdf",
+      "topics": ["multipolarity", "geopolitics", "international relations"],
+      "abstract": "An exploration of the emerging competitive multipolar order in the Middle East, highlighting the roles of various regional and global powers."
+    },
+    {
+      "id": "paper_011",
+      "title": "The Geopolitics of Post-Soviet Russia and the Middle East",
+      "authors": ["Andrej Kreutz"],
+      "year": 2002,
+      "venue": "Arab Studies Quarterly",
+      "doi": "10.2307/41858403",
+      "filename": "Kreutz-GEOPOLITICSPOSTSOVIETRUSSIA-2002.pdf",
+      "topics": ["Russia", "foreign policy", "Middle East geopolitics"],
+      "abstract": "A comprehensive look at the geopolitical strategies of Post-Soviet Russia in the Middle East and its relationship with Arab states."
+    },
+    {
+      "id": "paper_012",
+      "title": "Geopolitics, Local Politics and America's Role in the Middle East Peace Process",
+      "authors": ["Robert J. Lieber"],
+      "year": 1997,
+      "venue": "Indian Journal of Asian Affairs",
+      "doi": "10.2307/41950408",
+      "filename": "Lieber-GeopoliticsLocalPolitics-1997.pdf",
+      "topics": ["US foreign policy", "peace process", "local politics"],
+      "abstract": "An analysis of the intersection between global geopolitics, local politics, and the role of the United States in the Middle East peace process."
+    },
+    {
+      "id": "paper_013",
+      "title": "Religious Freedom, the Minority Question, and Geopolitics in the Middle East",
+      "authors": ["Saba Mahmood"],
+      "year": 2012,
+      "venue": "Comparative Studies in Society and History",
+      "doi": "10.2307/41428504",
+      "filename": "MAHMOOD-ReligiousFreedomMinority-2012.pdf",
+      "topics": ["religious freedom", "minority rights", "Middle East geopolitics"],
+      "abstract": "An examination of the complex relationship between religious freedom, the status of minorities, and geopolitical interests in the Middle East."
+    },
+    {
+      "id": "paper_014",
+      "title": "The Kurdish Question in the Aftermath of the Gulf War: Geopolitical and Geostrategic Changes in the Middle East",
+      "authors": ["Robert Olson"],
+      "year": 1992,
+      "venue": "Third World Quarterly",
+      "doi": "10.2307/3992197",
+      "filename": "Olson-KurdishQuestionAftermath-1992.pdf",
+      "topics": ["Kurdish question", "Gulf War", "geopolitics"],
+      "abstract": "An analysis of the geopolitical and geostrategic changes affecting the Kurdish population following the Gulf War."
+    },
+    {
+      "id": "paper_015",
+      "title": "Oil and Geopolitics: The Oil Crises of the 1970s and the Cold War",
+      "authors": ["David S. Painter"],
+      "year": 2014,
+      "venue": "Historical Social Research",
+      "doi": "10.2307/24145533",
+      "filename": "Painter-OilGeopoliticsOil-2014.pdf",
+      "topics": ["oil crisis", "Cold War", "energy geopolitics"],
+      "abstract": "A historical review of the 1970s oil crises and their intersection with Cold War geopolitics."
+    },
+    {
+      "id": "paper_016",
+      "title": "Deciphering China in the Middle East",
+      "authors": ["Erzsébet N. Rózsa"],
+      "year": 2020,
+      "venue": "European Union Institute for Security Studies (EUISS)",
+      "doi": "10.jstor/resrep25023",
+      "filename": "Rzsa-DECIPHERINGCHINAMIDDLE-2020.pdf",
+      "topics": ["China", "Middle East relations", "foreign policy"],
+      "abstract": "An in-depth look at China's growing presence and strategic interests in the Middle East."
+    },
+    {
+      "id": "paper_017",
+      "title": "The Geopolitics of Water in the Middle East: Fantasies and Realities",
+      "authors": ["Jan Selby"],
+      "year": 2005,
+      "venue": "Third World Quarterly",
+      "doi": "10.2307/3993731",
+      "filename": "Selby-GeopoliticsWaterMiddle-2005.pdf",
+      "topics": ["water conflict", "environmental geopolitics", "Middle East"],
+      "abstract": "A critical examination of the geopolitical role of water resources in the Middle East, separating widespread fantasies from political realities."
+    },
+    {
+      "id": "paper_018",
+      "title": "Rethinking Geopolitical Strategies: from Conflict Management to Conflict Resolution in the Middle East",
+      "authors": ["Bernard Siman"],
+      "year": 2023,
+      "venue": "Egmont Institute",
+      "doi": "10.jstor/resrep54953",
+      "filename": "Siman-RethinkingGeopoliticalStrategies-2023.pdf",
+      "topics": ["conflict resolution", "geopolitical strategy", "Middle East"],
+      "abstract": "An argument for shifting geopolitical strategies in the Middle East from mere conflict management toward durable conflict resolution."
+    },
+    {
+      "id": "paper_019",
+      "title": "After the Awakening: Future Security Trends in the Middle East",
+      "authors": ["Jacob Stokes"],
+      "year": 2014,
+      "venue": "Center for a New American Security",
+      "doi": "10.jstor/resrep06249",
+      "filename": "Stokes-Awakening-2014.pdf",
+      "topics": ["security trends", "Arab Awakening", "Middle East"],
+      "abstract": "An assessment of the future security landscape and emerging trends in the Middle East following the Arab uprisings."
+    },
+    {
+      "id": "paper_020",
+      "title": "Geopolitics and Energy Security: The US in the Middle East",
+      "authors": ["K.T. Thomas"],
+      "year": 2008,
+      "venue": "Proceedings of the Indian History Congress",
+      "doi": "10.2307/44147256",
+      "filename": "Thomas-GEOPOLITICSENERGYSECURITY-2008.pdf",
+      "topics": ["energy security", "US foreign policy", "geopolitics"],
+      "abstract": "An analysis of the intersection of geopolitics, energy security, and the enduring role of the United States in the Middle East."
+    }
+  ]
+}

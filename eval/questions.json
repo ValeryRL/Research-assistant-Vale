@@ -1,0 +1,42 @@
+[
+    {
+        "id": "q1",
+        "type": "factual",
+        "question": "What is the main contribution of the attention mechanism as described in the papers?",
+        "expected_themes": [
+            "transformers",
+            "elimination of recurrence",
+            "parallelization"
+        ]
+    },
+    {
+        "id": "q2",
+        "type": "analytical",
+        "question": "How do geopolitical changes impact the Kurdish question in the aftermath of the Gulf War?",
+        "expected_themes": [
+            "geopolitics",
+            "Gulf War",
+            "Kurdish population"
+        ]
+    },
+    {
+        "id": "q3",
+        "type": "synthesis",
+        "question": "Discuss the intersection of energy security, water resources, and political stability in the Middle East based on the provided papers.",
+        "expected_themes": [
+            "energy security",
+            "water resources",
+            "political stability",
+            "conflict management"
+        ]
+    },
+    {
+        "id": "q4",
+        "type": "edge_case",
+        "question": "What does the catalog say about quantum computing in the Middle East?",
+        "expected_themes": [
+            "not found in context",
+            "I cannot find this information"
+        ]
+    }
+]
