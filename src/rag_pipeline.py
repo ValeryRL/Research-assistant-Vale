@@ -27,7 +27,7 @@ class RAGPipeline:
             # If a simple filter is possible
             pass
             
-        results = self.vector_store.query(query_embedding, n_results=5, where=where_clause)
+        results = self.vector_store.query(query_embedding, n_results=3, where=where_clause)
         
         # 3. Format context
         contexts = []
@@ -61,13 +61,18 @@ class RAGPipeline:
         
         return response, citations
         
-    def _call_llm(self, prompt: str) -> str:
+    def _call_llm(self, prompt: str, retries: int = 2) -> str:
         if self.model_type == "google" and os.getenv("GOOGLE_API_KEY"):
             model = genai.GenerativeModel('gemini-1.5-flash')
-            try:
-                response = model.generate_content(prompt)
-                return response.text
-            except Exception as e:
-                return f"Error calling Google API: {e}"
+            last_error = ""
+            for attempt in range(retries):
+                try:
+                    response = model.generate_content(prompt)
+                    return response.text
+                except Exception as e:
+                    last_error = str(e)
+                    if "504" not in str(e) and "Deadline Exceeded" not in str(e):
+                        break # Only retry on timeouts
+            return f"⚠️ Error calling Google API after {retries} intentos: {last_error}. Por favor, vuelve a intentar tu pregunta."
         else:
             return "⚠️ LLM is not configured. Please add `GOOGLE_API_KEY` to an `.env` file in the root directory.\n\n**Here is the generated prompt that would have been sent:**\n\n```\n" + prompt + "\n```"
